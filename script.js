@@ -13,7 +13,7 @@ const wind = document.getElementById('wind');
 const humidity = document.getElementById('humidity');
 
 navigator.geolocation.getCurrentPosition(async (pos) => {
-	const query = `http://api.openweathermap.org/geo/1.0/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&limit=1&appid=0a6c8ce58f0b5edd77314c1649d29581`;
+	const query = `https://api.openweathermap.org/geo/1.0/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&limit=1&appid=0a6c8ce58f0b5edd77314c1649d29581`;
 	const response = await fetch(query, { mode: 'cors' });
 	const json = await response.json();
 	console.log(json[0].name);
@@ -25,7 +25,7 @@ const fetchCoordinates = async (city) => {
 		return;
 	}
 	const encodedCity = encodeURIComponent(city.trim());
-	const query = `http://api.openweathermap.org/geo/1.0/direct?q=${encodedCity}&limit=5&appid=0a6c8ce58f0b5edd77314c1649d29581`;
+	const query = `https://api.openweathermap.org/geo/1.0/direct?q=${encodedCity}&limit=5&appid=0a6c8ce58f0b5edd77314c1649d29581`;
 	const response = await fetch(query, { mode: 'cors' });
 	const json = await response.json();
 	console.log(json);
