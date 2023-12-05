@@ -1,0 +1,88 @@
+body {
+	background: url('./assets/clouds.jpg') no-repeat;
+	background-color: black;
+	background-size: cover;
+	color: white;
+	height: 100vh;
+	display: grid;
+	place-content: center;
+	margin: 0;
+}
+
+.container {
+	border: 5px solid white;
+	width: 70vw;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: rgba(63, 63, 63, 0.521);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.18);
+	padding: 20px;
+}
+
+.city-search {
+	margin-bottom: auto;
+	align-self: flex-end;
+	color: white;
+}
+
+.city-search ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	border: 1px solid white;
+	background-color: #f2f2f2;
+	color: gray;
+}
+
+.city-search ul li {
+	cursor: pointer;
+	border-bottom: 1px solid gray;
+	padding: 5px;
+}
+
+.city-search ul li:last-child {
+	border: none;
+}
+
+.city-search input {
+	width: 200px;
+	color: white;
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid white;
+}
+
+.container input:focus {
+	outline: none;
+}
+
+.weather-info {
+	margin-bottom: auto;
+	margin-left: 200px;
+}
+
+#city-name {
+	font-size: 2.5rem;
+}
+
+#sky {
+	font-size: 1.5rem;
+}
+
+#conditions {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	font-size: 1.2rem;
+}
+
+#other-info {
+	border-left: 1px solid white;
+	padding-left: 20px;
+}
