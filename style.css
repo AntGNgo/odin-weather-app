@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
+	font-family: 'Open Sans', sans-serif;
 	background: url('./assets/clouds.jpg') no-repeat;
 	background-color: black;
 	background-size: cover;
@@ -59,7 +62,11 @@ body {
 	border-bottom: 2px solid white;
 }
 
-.container input:focus {
+.city-search input::placeholder {
+	color: white;
+}
+
+.city-search input:focus {
 	outline: none;
 }
 
